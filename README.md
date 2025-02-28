@@ -38,8 +38,8 @@ This project provides a structured web page displaying essential Kali Linux lab 
 ### LAB 2: Information Gathering
 - dnsenum facebook.com
 - dnsenum --dnsserver 8.8.8.8 facebook.com
-- dnsrecon -h
 - dnsrecon -d Instagram.com -c insta.csv
+- dnsrecon -h
 
 ### LAB 3: Network Mapper (nmap)
 - nmap facebook.com
@@ -47,7 +47,7 @@ This project provides a structured web page displaying essential Kali Linux lab 
 - nmap 172.217.27.174-100
 - nmap 103.76.228.*
 - nmap -v facebook.com
-- nmap <ip> <ip> <ip>
+- nmap 103.76.228.224 157.240.98.35 172.217.27.174
 - sudo nmap -sA 192.68.0.50
 
 ### LAB 4: Vulnerability Analysis (Nikto)
@@ -73,29 +73,26 @@ This project provides a structured web page displaying essential Kali Linux lab 
 - site:github.com nmap
 
 ### LAB 6: Social Engineering Toolkit
-- Refer lab manual
+#### Method 1 tamplate
+<a href="https://drive.google.com/file/d/1Qjvpq43L4JzfwA-VGtxibQWiF3hZQD3h/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-Click%20Here-blue?style=for-the-badge">
+</a>
+
+#### Method 2 url clone
+<a href="https://drive.google.com/file/d/160p_CPwef3tldOQ8euVw6sgHZ7XvoRZU/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-Click%20Here-blue?style=for-the-badge">
+</a>
 
 ### LAB 7: Password Attacks (John The Ripper)
-- Generate Hash from MD5 website
-- Copy SHA1 hash code
-
-#### 1st way
-- create new file vi pass.txt
-- enter hash code
-- run john pass.txt --format=RAW-SHA1
-
-#### 2nd way
-- vim words.txt // insert some pass key
-- vim pass.txt //enter hash code
-- run john --wordlist=word.txt pass.txt --format=RAW-SHA1
+<a href="https://drive.google.com/file/d/1wCxkZHE3Md72mHoLIKl2jIxu1nbyCmY_/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-Click%20Here-blue?style=for-the-badge">
+</a>
 
 ### LAB 8: Sniffing & Spoofing (Wireshark)
-- Open Wireshark
-- Click on any
-- Open browser > search any site
-- In Wireshark > Edit > Find Packet
-- In Window > Display Filter > Set Type = String
-- Enter 'git' in the empty box
+<a href="https://drive.google.com/file/d/1TI00KaNUqci8vGKxoBYTIrglrhl4cVmI/view?usp=sharing" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-Click%20Here-blue?style=for-the-badge">
+</a>
+
 
 ## Contributing
 Feel free to contribute by submitting a pull request or reporting issues.
