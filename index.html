@@ -1,153 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kali Linux Lab Commands</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-      }
-      .container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      h2 {
-        background: #054c5f;
-        color: white;
-        padding: 10px;
-        border-radius: 4px;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      li {
-        font-size: 20px;
-        background: #eee;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 4px;
-        font-family: monospace;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #222;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .video-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .video-link:hover {
+            background: #0056b3;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <h1>Kali Linux Lab Commands</h1>
-      <div id="labs"></div>
+        <h1>Kali Linux Lab Commands</h1>
+        <h2>Lab Commands Overview</h2>
+        
+        <h3>LAB 1: Basic Commands</h3>
+        <pre>
+whoami
+date
+uname
+ls
+history
+pwd
+nano file.txt
+cat file.txt
+head file.txt
+head -n3 file.txt
+tail file.txt
+tail -n3 file.txt
+cal
+cal 2024
+man cal
+cp file1.txt file2.txt
+tac file1.txt
+mkdir newfolder
+rmdir newfolder
+rm file2.txt
+vi text.txt
+wc file.txt
+mv file1.txt file2.txt
+sort file.txt
+sort -r file.txt
+        </pre>
+        
+        <h3>LAB 2: Information Gathering</h3>
+        <pre>
+dnsenum facebook.com
+dnsenum --dnsserver 8.8.8.8 facebook.com
+dnsrecon -d Instagram.com -c insta.csv
+dnsrecon -h
+        </pre>
+        
+        <h3>LAB 3: Network Mapper (nmap)</h3>
+        <pre>
+nmap facebook.com
+nmap 172.217.27.174
+nmap 172.217.27.174-100
+nmap 103.76.228.*
+nmap -v facebook.com
+sudo nmap -sA 192.68.0.50
+        </pre>
+        
+        <h3>LAB 4: Vulnerability Analysis (Nikto)</h3>
+        <pre>
+nikto -h rlsbca.edu.in
+nikto -h rlsbca.edu.in -ssl
+nikto -h rlsbca.edu.in -port 80,44,22
+nikto -h rlsbca.edu.in -no404
+        </pre>
+        
+        <h3>LAB 5: Advanced Google Dorks</h3>
+        <pre>
+allintitle:cyber security essentials
+allinurl:cyber security hacker
+cache:courses.stationx.net
+define:reconnaissance
+ext:php site:microsoft.com
+filetype:pdf site:apple.com
+        </pre>
+        
+        <h3>LAB 6: Social Engineering Toolkit</h3>
+        <a class="video-link" href="https://drive.google.com/file/d/1Qjvpq43L4JzfwA-VGtxibQWiF3hZQD3h/view?usp=sharing" target="_blank">Method 1 Template</a>
+        <a class="video-link" href="https://drive.google.com/file/d/160p_CPwef3tldOQ8euVw6sgHZ7XvoRZU/view?usp=sharing" target="_blank">Method 2 URL Clone</a>
+        
+        <h3>LAB 7: Password Attacks (John The Ripper)</h3>
+        <a class="video-link" href="https://drive.google.com/file/d/1wCxkZHE3Md72mHoLIKl2jIxu1nbyCmY_/view?usp=sharing" target="_blank">Watch Video</a>
+        
+        <h3>LAB 8: Sniffing & Spoofing (Wireshark)</h3>
+        <a class="video-link" href="https://drive.google.com/file/d/1TI00KaNUqci8vGKxoBYTIrglrhl4cVmI/view?usp=sharing" target="_blank">Watch Video</a>
+        
+        <h2>Contributing</h2>
+        <p>Feel free to contribute by submitting a pull request or reporting issues.</p>
+        
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License.</p>
     </div>
-
-    <script>
-      const data = {
-        "LAB 1: Basic Commands": [
-          "whoami",
-          "date",
-          "uname",
-          "ls",
-          "history",
-          "pwd",
-          "nano file.txt",
-          "cat file.txt",
-          "head file.txt",
-          "head -n3 file.txt",
-          "tail.txt",
-          "tail -n3 file.txt",
-          "cal",
-          "cal 2024",
-          "man cal",
-          "cp file1.txt file2.txt",
-          "tac file1.txt",
-          "tuch file.txt",
-          "mkdir newfolder",
-          "rmdir newfolder",
-          "rm file2.txt",
-          "vi text.txt",
-          "wc file.txt",
-          "wc -l file.txt",
-          "wc -c file.txt",
-          "wc -w file.txt",
-          "free",
-          "mv file1.txt file2.txt",
-          "sort file.txt",
-          "sort -r file.txt",
-        ],
-        "LAB 2: Information Gathering": [
-          "dnsenum facebook.com",
-          "dnsenum --dnsserver 8.8.8.8 facebook.com",
-          "dnsrecon -h",
-          "dnsrecon -d Instagram.com -c insta.csv",
-        ],
-        "LAB 3: Network Mapper (nmap)": [
-          "nmap facebook.com",
-          "nmap 172.217.27.174",
-          "nmap 172.217.27.174-100",
-          "nmap 103.76.228.*",
-          "nmap -v facebook.com",
-          "nmap <ip> <ip> <ip>",
-          "sudo nmap -sA 192.68.0.50",
-        ],
-        "LAB 4: Vulnerability Analysis (Nikto)": [
-          "nikto -h rlsbca.edu.in",
-          "nikto -h rlsbca.edu.in -ssl",
-          "nikto -h rlsbca.edu.in -port 80,44,22",
-          "nikto -h rlsbca.edu.in -no404",
-        ],
-        "LAB 5: Advanced Google Dorks": [
-          "allintitle:cyber security essentials",
-          "allinurl:cyber security hacker",
-          "cache:courses.stationx.net",
-          "define:reconnaissance",
-          "ext:php site:microsoft.com",
-          "filetype:pdf site:apple.com",
-          "info:apple.com -site:apple.com",
-          "intext:munira tom site:goodreads.com",
-          "intitle:google site:github.com",
-          "inurl:stationx -site:stationx.net",
-          "link:kali.org 'kali purple'",
-          "map:Shivaji Colony, Tilakwadi, Belagavi",
-          "phonebook:555-555-5555",
-          "site:github.com nmap",
-        ],
-        "LAB 6: Social Engineering Toolkit": ["Refer lab manual"],
-        "LAB 7: Password Attacks (John The Ripper)": [
-          "Generate Hash from MD5 website",
-          "Copy SHA1 hash code",
-          "1st way: vi pass.txt, enter hash code, run john pass.txt --format=RAW-SHA1",
-          "2nd way: vim words.txt, insert some pass keys, vim pass.txt, enter hash code",
-          "run john --wordlist=word.txt pass.txt --format=RAW-SHA1",
-        ],
-        "LAB 8: Sniffing and Spoofing (Wireshark)": [
-          "Open Wireshark",
-          "Click on any network",
-          "Open browser > search any site",
-          "In Wireshark > Edit > Find Packet",
-          "In Window > Display Filter > Set Type = String",
-          "Enter 'git' in the search box",
-        ],
-      };
-
-      const container = document.getElementById("labs");
-
-      for (let lab in data) {
-        let section = document.createElement("div");
-        section.innerHTML = `<h2>${lab}</h2>`;
-        let list = document.createElement("ul");
-        data[lab].forEach((cmd) => {
-          let listItem = document.createElement("li");
-          listItem.textContent = cmd;
-          list.appendChild(listItem);
-        });
-        section.appendChild(list);
-        container.appendChild(section);
-      }
-    </script>
-  </body>
+</body>
 </html>
